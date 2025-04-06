@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AABC5F932DA23320009F13D8 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; };
-		AABC5F942DA23320009F13D8 /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AABC5FA72DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
 		AABC5FA82DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
 		AABC5FA92DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
@@ -63,20 +62,6 @@
 			remoteInfo = SharkTracker;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AABC5F952DA23320009F13D8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AABC5F942DA23320009F13D8 /* SceneKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AABC5F662DA22A33009F13D8 /* SharkTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,7 +224,6 @@
 				AABC5F622DA22A33009F13D8 /* Sources */,
 				AABC5F632DA22A33009F13D8 /* Frameworks */,
 				AABC5F642DA22A33009F13D8 /* Resources */,
-				AABC5F952DA23320009F13D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
