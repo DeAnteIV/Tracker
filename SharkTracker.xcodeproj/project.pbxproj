@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AABC5F932DA23320009F13D8 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; };
+		AABC5F942DA23320009F13D8 /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AABC5FA72DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
+		AABC5FA82DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
+		AABC5FA92DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
+		AABC5FAB2DA25A77009F13D8 /* Shark3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FAA2DA25A77009F13D8 /* Shark3DView.swift */; };
+		AABC5FB12DA25B11009F13D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB02DA25B11009F13D8 /* ContentView.swift */; };
+		AABC5FB82DA25FE5009F13D8 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */; };
+		AABC5FB92DA25FE5009F13D8 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */; };
+		AABC5FBA2DA25FE5009F13D8 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */; };
+		AABC5FBC2DA26092009F13D8 /* SharkFinSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FBB2DA26092009F13D8 /* SharkFinSliderView.swift */; };
+		AABC5FBE2DA26135009F13D8 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FBD2DA26135009F13D8 /* JournalView.swift */; };
+		AABC5FC02DA262B7009F13D8 /* AppMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FBF2DA262B7009F13D8 /* AppMainView.swift */; };
+		AABC5FC22DA263C2009F13D8 /* SharkTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FC12DA263C2009F13D8 /* SharkTrackerApp.swift */; };
+		AABC5FC62DA2657D009F13D8 /* GenderSharkSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FC52DA2657D009F13D8 /* GenderSharkSelectorView.swift */; };
+		AABC5FC82DA26A5D009F13D8 /* MainSharkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FC72DA26A5D009F13D8 /* MainSharkView.swift */; };
+		AABC5FCA2DA26AC8009F13D8 /* FeedingGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FC92DA26AC8009F13D8 /* FeedingGameView.swift */; };
+		AABC5FCC2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */; };
+		AABC5FCD2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */; };
+		AABC5FCE2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */; };
+		AABC5FD02DA26DA3009F13D8 /* GenderTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */; };
+		AABC5FD12DA26DA3009F13D8 /* GenderTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */; };
+		AABC5FD22DA26DA3009F13D8 /* GenderTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */; };
+		AABC5FD42DA26E0D009F13D8 /* TrackingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD32DA26E0D009F13D8 /* TrackingTabView.swift */; };
+		AABC5FD62DA26E40009F13D8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD52DA26E40009F13D8 /* CalendarView.swift */; };
+		AABC5FD82DA26E63009F13D8 /* GenderBarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD72DA26E63009F13D8 /* GenderBarGraphView.swift */; };
+		AABC5FDA2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */; };
+		AABC5FDB2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */; };
+		AABC5FDC2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */; };
+		AABC5FE22DA274F0009F13D8 /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FE12DA274F0009F13D8 /* DayDetailView.swift */; };
+		AABC5FE42DA27648009F13D8 /* WeekDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FE32DA27648009F13D8 /* WeekDetailView.swift */; };
+		AABC5FE62DA2767C009F13D8 /* MonthDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FE52DA2767C009F13D8 /* MonthDetailView.swift */; };
+		AABC5FEC2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
+		AABC5FED2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
+		AABC5FEE2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
+		AABC5FF02DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
+		AABC5FF12DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
+		AABC5FF22DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AABC5F742DA22A35009F13D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABC5F5E2DA22A33009F13D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABC5F652DA22A33009F13D8;
+			remoteInfo = SharkTracker;
+		};
+		AABC5F7E2DA22A35009F13D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABC5F5E2DA22A33009F13D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABC5F652DA22A33009F13D8;
+			remoteInfo = SharkTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AABC5F952DA23320009F13D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AABC5F942DA23320009F13D8 /* SceneKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AABC5F662DA22A33009F13D8 /* SharkTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABC5F732DA22A35009F13D8 /* SharkTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABC5F7D2DA22A35009F13D8 /* SharkTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABC5F912DA2331A009F13D8 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		AABC5FA62DA25A47009F13D8 /* SharkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkModel.swift; sourceTree = "<group>"; };
+		AABC5FAA2DA25A77009F13D8 /* Shark3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shark3DView.swift; sourceTree = "<group>"; };
+		AABC5FB02DA25B11009F13D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		AABC5FBB2DA26092009F13D8 /* SharkFinSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkFinSliderView.swift; sourceTree = "<group>"; };
+		AABC5FBD2DA26135009F13D8 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		AABC5FBF2DA262B7009F13D8 /* AppMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainView.swift; sourceTree = "<group>"; };
+		AABC5FC12DA263C2009F13D8 /* SharkTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkTrackerApp.swift; sourceTree = "<group>"; };
+		AABC5FC52DA2657D009F13D8 /* GenderSharkSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSharkSelectorView.swift; sourceTree = "<group>"; };
+		AABC5FC72DA26A5D009F13D8 /* MainSharkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSharkView.swift; sourceTree = "<group>"; };
+		AABC5FC92DA26AC8009F13D8 /* FeedingGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingGameView.swift; sourceTree = "<group>"; };
+		AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderIdentityLog.swift; sourceTree = "<group>"; };
+		AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTracker.swift; sourceTree = "<group>"; };
+		AABC5FD32DA26E0D009F13D8 /* TrackingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTabView.swift; sourceTree = "<group>"; };
+		AABC5FD52DA26E40009F13D8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AABC5FD72DA26E63009F13D8 /* GenderBarGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderBarGraphView.swift; sourceTree = "<group>"; };
+		AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionManager.swift; sourceTree = "<group>"; };
+		AABC5FE12DA274F0009F13D8 /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
+		AABC5FE32DA27648009F13D8 /* WeekDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetailView.swift; sourceTree = "<group>"; };
+		AABC5FE52DA2767C009F13D8 /* MonthDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetailView.swift; sourceTree = "<group>"; };
+		AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMode.swift; sourceTree = "<group>"; };
+		AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViews.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AABC5F632DA22A33009F13D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABC5F932DA23320009F13D8 /* SceneKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F702DA22A35009F13D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F7A2DA22A35009F13D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AABC5F5D2DA22A33009F13D8 = {
+			isa = PBXGroup;
+			children = (
+				AABC5FC12DA263C2009F13D8 /* SharkTrackerApp.swift */,
+				AABC5FA02DA25944009F13D8 /* Scenes */,
+				AABC5F9F2DA25933009F13D8 /* ViewModels */,
+				AABC5F972DA233BF009F13D8 /* Models */,
+				AABC5F982DA233CC009F13D8 /* Views */,
+				AABC5F992DA233D6009F13D8 /* Utilities */,
+				AABC5F9A2DA233E0009F13D8 /* Assets */,
+				AABC5F902DA2331A009F13D8 /* Frameworks */,
+				AABC5F672DA22A33009F13D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AABC5F672DA22A33009F13D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AABC5F662DA22A33009F13D8 /* SharkTracker.app */,
+				AABC5F732DA22A35009F13D8 /* SharkTrackerTests.xctest */,
+				AABC5F7D2DA22A35009F13D8 /* SharkTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AABC5F902DA2331A009F13D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AABC5F912DA2331A009F13D8 /* SceneKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AABC5F972DA233BF009F13D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AABC5FA62DA25A47009F13D8 /* SharkModel.swift */,
+				AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */,
+				AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */,
+				AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */,
+				AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */,
+				AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AABC5F982DA233CC009F13D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AABC5FBF2DA262B7009F13D8 /* AppMainView.swift */,
+				AABC5FAA2DA25A77009F13D8 /* Shark3DView.swift */,
+				AABC5FB02DA25B11009F13D8 /* ContentView.swift */,
+				AABC5FBB2DA26092009F13D8 /* SharkFinSliderView.swift */,
+				AABC5FBD2DA26135009F13D8 /* JournalView.swift */,
+				AABC5FC52DA2657D009F13D8 /* GenderSharkSelectorView.swift */,
+				AABC5FC72DA26A5D009F13D8 /* MainSharkView.swift */,
+				AABC5FC92DA26AC8009F13D8 /* FeedingGameView.swift */,
+				AABC5FD32DA26E0D009F13D8 /* TrackingTabView.swift */,
+				AABC5FD52DA26E40009F13D8 /* CalendarView.swift */,
+				AABC5FD72DA26E63009F13D8 /* GenderBarGraphView.swift */,
+				AABC5FE12DA274F0009F13D8 /* DayDetailView.swift */,
+				AABC5FE32DA27648009F13D8 /* WeekDetailView.swift */,
+				AABC5FE52DA2767C009F13D8 /* MonthDetailView.swift */,
+				AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AABC5F992DA233D6009F13D8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AABC5F9A2DA233E0009F13D8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AABC5F9F2DA25933009F13D8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AABC5FA02DA25944009F13D8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AABC5F652DA22A33009F13D8 /* SharkTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABC5F872DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTracker" */;
+			buildPhases = (
+				AABC5F622DA22A33009F13D8 /* Sources */,
+				AABC5F632DA22A33009F13D8 /* Frameworks */,
+				AABC5F642DA22A33009F13D8 /* Resources */,
+				AABC5F952DA23320009F13D8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharkTracker;
+			packageProductDependencies = (
+			);
+			productName = SharkTracker;
+			productReference = AABC5F662DA22A33009F13D8 /* SharkTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AABC5F722DA22A35009F13D8 /* SharkTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABC5F8A2DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTrackerTests" */;
+			buildPhases = (
+				AABC5F6F2DA22A35009F13D8 /* Sources */,
+				AABC5F702DA22A35009F13D8 /* Frameworks */,
+				AABC5F712DA22A35009F13D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABC5F752DA22A35009F13D8 /* PBXTargetDependency */,
+			);
+			name = SharkTrackerTests;
+			packageProductDependencies = (
+			);
+			productName = SharkTrackerTests;
+			productReference = AABC5F732DA22A35009F13D8 /* SharkTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AABC5F7C2DA22A35009F13D8 /* SharkTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABC5F8D2DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTrackerUITests" */;
+			buildPhases = (
+				AABC5F792DA22A35009F13D8 /* Sources */,
+				AABC5F7A2DA22A35009F13D8 /* Frameworks */,
+				AABC5F7B2DA22A35009F13D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABC5F7F2DA22A35009F13D8 /* PBXTargetDependency */,
+			);
+			name = SharkTrackerUITests;
+			packageProductDependencies = (
+			);
+			productName = SharkTrackerUITests;
+			productReference = AABC5F7D2DA22A35009F13D8 /* SharkTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AABC5F5E2DA22A33009F13D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					AABC5F652DA22A33009F13D8 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+					};
+					AABC5F722DA22A35009F13D8 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+						TestTargetID = AABC5F652DA22A33009F13D8;
+					};
+					AABC5F7C2DA22A35009F13D8 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+						TestTargetID = AABC5F652DA22A33009F13D8;
+					};
+				};
+			};
+			buildConfigurationList = AABC5F612DA22A33009F13D8 /* Build configuration list for PBXProject "SharkTracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AABC5F5D2DA22A33009F13D8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AABC5F672DA22A33009F13D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AABC5F652DA22A33009F13D8 /* SharkTracker */,
+				AABC5F722DA22A35009F13D8 /* SharkTrackerTests */,
+				AABC5F7C2DA22A35009F13D8 /* SharkTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AABC5F642DA22A33009F13D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F712DA22A35009F13D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F7B2DA22A35009F13D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AABC5F622DA22A33009F13D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABC5FEC2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */,
+				AABC5FE62DA2767C009F13D8 /* MonthDetailView.swift in Sources */,
+				AABC5FC22DA263C2009F13D8 /* SharkTrackerApp.swift in Sources */,
+				AABC5FE42DA27648009F13D8 /* WeekDetailView.swift in Sources */,
+				AABC5FA72DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FF02DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
+				AABC5FB82DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
+				AABC5FC62DA2657D009F13D8 /* GenderSharkSelectorView.swift in Sources */,
+				AABC5FBC2DA26092009F13D8 /* SharkFinSliderView.swift in Sources */,
+				AABC5FDB2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
+				AABC5FE22DA274F0009F13D8 /* DayDetailView.swift in Sources */,
+				AABC5FD62DA26E40009F13D8 /* CalendarView.swift in Sources */,
+				AABC5FD02DA26DA3009F13D8 /* GenderTracker.swift in Sources */,
+				AABC5FCA2DA26AC8009F13D8 /* FeedingGameView.swift in Sources */,
+				AABC5FD42DA26E0D009F13D8 /* TrackingTabView.swift in Sources */,
+				AABC5FC82DA26A5D009F13D8 /* MainSharkView.swift in Sources */,
+				AABC5FD82DA26E63009F13D8 /* GenderBarGraphView.swift in Sources */,
+				AABC5FBE2DA26135009F13D8 /* JournalView.swift in Sources */,
+				AABC5FC02DA262B7009F13D8 /* AppMainView.swift in Sources */,
+				AABC5FB12DA25B11009F13D8 /* ContentView.swift in Sources */,
+				AABC5FAB2DA25A77009F13D8 /* Shark3DView.swift in Sources */,
+				AABC5FCD2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F6F2DA22A35009F13D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABC5FEE2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */,
+				AABC5FDC2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
+				AABC5FF12DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
+				AABC5FB92DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
+				AABC5FA82DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FCC2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
+				AABC5FD12DA26DA3009F13D8 /* GenderTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC5F792DA22A35009F13D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABC5FED2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */,
+				AABC5FDA2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
+				AABC5FF22DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
+				AABC5FBA2DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
+				AABC5FA92DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FCE2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
+				AABC5FD22DA26DA3009F13D8 /* GenderTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AABC5F752DA22A35009F13D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABC5F652DA22A33009F13D8 /* SharkTracker */;
+			targetProxy = AABC5F742DA22A35009F13D8 /* PBXContainerItemProxy */;
+		};
+		AABC5F7F2DA22A35009F13D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABC5F652DA22A33009F13D8 /* SharkTracker */;
+			targetProxy = AABC5F7E2DA22A35009F13D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AABC5F852DA22A35009F13D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AABC5F862DA22A35009F13D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AABC5F882DA22A35009F13D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AABC5F892DA22A35009F13D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AABC5F8B2DA22A35009F13D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharkTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SharkTracker";
+			};
+			name = Debug;
+		};
+		AABC5F8C2DA22A35009F13D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharkTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SharkTracker";
+			};
+			name = Release;
+		};
+		AABC5F8E2DA22A35009F13D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SharkTracker;
+			};
+			name = Debug;
+		};
+		AABC5F8F2DA22A35009F13D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IV.SharkTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SharkTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AABC5F612DA22A33009F13D8 /* Build configuration list for PBXProject "SharkTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABC5F852DA22A35009F13D8 /* Debug */,
+				AABC5F862DA22A35009F13D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABC5F872DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABC5F882DA22A35009F13D8 /* Debug */,
+				AABC5F892DA22A35009F13D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABC5F8A2DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABC5F8B2DA22A35009F13D8 /* Debug */,
+				AABC5F8C2DA22A35009F13D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABC5F8D2DA22A35009F13D8 /* Build configuration list for PBXNativeTarget "SharkTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABC5F8E2DA22A35009F13D8 /* Debug */,
+				AABC5F8F2DA22A35009F13D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AABC5F5E2DA22A33009F13D8 /* Project object */;
+}
