@@ -1,11 +1,5 @@
 import SwiftUI
 
-// MARK: - CalendarMode
-
-enum CalendarMode: String, CaseIterable {
-    case day, week, month
-}
-
 // MARK: - CalendarView
 
 struct CalendarView: View {

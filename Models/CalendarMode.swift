@@ -1,8 +1,7 @@
-// Models/CalendarMode.swift
 import Foundation
 
-enum CalendarMode {
-    case month
-    case week
+enum CalendarMode: String, CaseIterable {
     case day
+    case week
+    case month
 }
