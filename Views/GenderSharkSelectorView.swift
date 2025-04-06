@@ -14,7 +14,7 @@ struct GenderSharkSelectorView: View {
                             .shadow(radius: 10)
                             .onTapGesture {
                                 genderManager.selectedGender = gender
-                                GenderTracker.shared.logGenderSelection(gender)
+                                GenderTracker.shared.logGenderIdentity(gender)
                             }
 
                         Text(gender.label)

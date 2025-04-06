@@ -1,7 +1,5 @@
 import SwiftUI
 
-// MARK: - CalendarView
-
 struct CalendarView: View {
     @State private var selectedDate: Date = Date()
     @State private var displayMode: CalendarMode = .month
@@ -11,19 +9,15 @@ struct CalendarView: View {
     }
 }
 
-// MARK: - CalendarGridView
-
 struct CalendarGridView: View {
-    // Bindings for the selected date and display mode
-    @Binding var selectedDate: Date
-    @Binding var displayMode: CalendarMode
+    @Binding var selectedDate: Date         // Binding property named selectedDate
+    @Binding var displayMode: CalendarMode  // Binding property named displayMode
 
-    // Assuming GenderTracker is defined elsewhere in your project.
     @ObservedObject private var tracker = GenderTracker.shared
     private let calendar = Calendar.current
 
-    // Compute the dates to display based on the current display mode.
     private var visibleDates: [Date] {
+        // returns [Date] (no overshadowing variables named ‘date’)
         switch displayMode {
         case .day:
             return [selectedDate]
@@ -36,14 +30,13 @@ struct CalendarGridView: View {
         }
     }
 
-    // Determine the dominant gender for a given date.
     private func dominantGender(on date: Date) -> SharkGender? {
+        // ‘date’ is a parameter, standard usage (does NOT overshadow Calendar method)
         let dayLogs = tracker.logs(for: date)
         let counts = Dictionary(grouping: dayLogs, by: { $0.gender }).mapValues { $0.count }
         return counts.max { $0.value < $1.value }?.key
     }
 
-    // Map a gender to a background color.
     private func color(for gender: SharkGender?) -> Color {
         switch gender {
         case .masc:      return Color.blue.opacity(0.6)
@@ -55,25 +48,23 @@ struct CalendarGridView: View {
 
     var body: some View {
         VStack(spacing: 8) {
-            // Header title for the selected date.
             Text(headerTitle(for: selectedDate))
                 .font(.title2)
                 .bold()
 
-            // Weekday initials (shown if the display mode is not "day")
             if displayMode != .day {
                 HStack {
-                    ForEach(calendar.shortWeekdaySymbols, id: \.self) { day in
-                        Text(String(day.prefix(1)))
+                    ForEach(calendar.shortWeekdaySymbols, id: \.self) { daySymbol in
+                        Text(String(daySymbol.prefix(1)))
                             .frame(maxWidth: .infinity)
                             .font(.caption)
                     }
                 }
             }
 
-            // Grid of dates
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 10) {
                 ForEach(visibleDates, id: \.self) { date in
+                    // `date` is a loop variable (ForEach). This does NOT overshadow the Calendar’s method.
                     VStack(spacing: 4) {
                         Text("\(calendar.component(.day, from: date))")
                             .font(.caption)
@@ -82,8 +73,10 @@ struct CalendarGridView: View {
                             .clipShape(Circle())
                             .overlay(
                                 Circle()
-                                    .stroke(Color.primary,
-                                            lineWidth: calendar.isDate(date, inSameDayAs: selectedDate) ? 2 : 0)
+                                    .stroke(
+                                        Color.primary,
+                                        lineWidth: calendar.isDate(date, inSameDayAs: selectedDate) ? 2 : 0
+                                    )
                             )
                             .onTapGesture {
                                 withAnimation {
@@ -91,7 +84,6 @@ struct CalendarGridView: View {
                                 }
                             }
 
-                        // Inline detail view for the tapped date.
                         if calendar.isDate(date, inSameDayAs: selectedDate) {
                             switch displayMode {
                             case .day:
@@ -129,24 +121,23 @@ struct CalendarGridView: View {
         .padding(.vertical)
     }
 
-    // MARK: - Helpers
-
     private func headerTitle(for date: Date) -> String {
-        let df = DateFormatter()
+        // Again, ‘date’ is a parameter, standard usage.
+        let formatter = DateFormatter()
         switch displayMode {
         case .day:
-            df.dateFormat = "MMMM d, yyyy"
-            return df.string(from: date)
+            formatter.dateFormat = "MMMM d, yyyy"
+            return formatter.string(from: date)
         case .week:
             guard let weekInterval = calendar.dateInterval(of: .weekOfYear, for: date),
-                  let end = calendar.date(byAdding: .day, value: 6, to: weekInterval.start) else {
+                  let endDate = calendar.date(byAdding: .day, value: 6, to: weekInterval.start) else {
                 return ""
             }
-            df.dateFormat = "MMM d"
-            return "\(df.string(from: weekInterval.start)) – \(df.string(from: end))"
+            formatter.dateFormat = "MMM d"
+            return "\(formatter.string(from: weekInterval.start)) – \(formatter.string(from: endDate))"
         case .month:
-            df.dateFormat = "MMMM yyyy"
-            return df.string(from: date)
+            formatter.dateFormat = "MMMM yyyy"
+            return formatter.string(from: date)
         }
     }
 
@@ -173,33 +164,33 @@ struct CalendarGridView: View {
     }
 }
 
-// MARK: - Calendar Extensions
-
 extension Calendar {
     func generateDates(in interval: DateInterval) -> [Date] {
         var dates: [Date] = []
         var current = interval.start
         while current < interval.end {
             dates.append(current)
-            guard let next = date(byAdding: .day, value: 1, to: current) else { break }
-            current = next
+            guard let nextDate = self.date(byAdding: .day, value: 1, to: current) else { break }
+            current = nextDate
         }
         return dates
     }
 
-    func datesForWeek(containing date: Date) -> [Date] {
-        guard let weekInterval = dateInterval(of: .weekOfYear, for: date) else { return [] }
-        return (0..<7).compactMap { date(byAdding: .day, value: $0, to: weekInterval.start) }
+    func datesForWeek(containing inputDate: Date) -> [Date] {
+        guard let weekInterval = self.dateInterval(of: .weekOfYear, for: inputDate) else { return [] }
+        return (0..<7).compactMap { offset in
+            self.date(byAdding: .day, value: offset, to: weekInterval.start)
+        }
     }
 
-    func datesForMonth(containing date: Date) -> [Date] {
-        guard let monthInterval = dateInterval(of: .month, for: date) else { return [] }
+    func datesForMonth(containing inputDate: Date) -> [Date] {
+        guard let monthInterval = self.dateInterval(of: .month, for: inputDate) else { return [] }
         var dates: [Date] = []
         var current = monthInterval.start
         while current <= monthInterval.end {
             dates.append(current)
-            guard let next = date(byAdding: .day, value: 1, to: current) else { break }
-            current = next
+            guard let nextDate = self.date(byAdding: .day, value: 1, to: current) else { break }
+            current = nextDate
         }
         return dates
     }

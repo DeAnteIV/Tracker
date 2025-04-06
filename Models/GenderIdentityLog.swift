@@ -1,9 +1,7 @@
 import Foundation
 
-struct GenderIdentityLog: Identifiable, Hashable, Codable
-{ var id = UUID()
-    var timestamp: Date
-    var gender: SharkGender }
-
-
-
+struct GenderIdentityLog: Identifiable, Codable {
+    let id = UUID()
+    let gender: SharkGender
+    let timestamp: Date
+}

@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		AABC5F932DA23320009F13D8 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; };
 		AABC5F942DA23320009F13D8 /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AABC5F912DA2331A009F13D8 /* SceneKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AABC5FA72DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
-		AABC5FA82DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
-		AABC5FA92DA25A47009F13D8 /* SharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkModel.swift */; };
+		AABC5FA72DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
+		AABC5FA82DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
+		AABC5FA92DA25A47009F13D8 /* SharkGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FA62DA25A47009F13D8 /* SharkGender.swift */; };
 		AABC5FAB2DA25A77009F13D8 /* Shark3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FAA2DA25A77009F13D8 /* Shark3DView.swift */; };
 		AABC5FB12DA25B11009F13D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB02DA25B11009F13D8 /* ContentView.swift */; };
 		AABC5FB82DA25FE5009F13D8 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */; };
@@ -83,7 +83,7 @@
 		AABC5F732DA22A35009F13D8 /* SharkTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC5F7D2DA22A35009F13D8 /* SharkTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC5F912DA2331A009F13D8 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		AABC5FA62DA25A47009F13D8 /* SharkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkModel.swift; sourceTree = "<group>"; };
+		AABC5FA62DA25A47009F13D8 /* SharkGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkGender.swift; sourceTree = "<group>"; };
 		AABC5FAA2DA25A77009F13D8 /* Shark3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shark3DView.swift; sourceTree = "<group>"; };
 		AABC5FB02DA25B11009F13D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		AABC5F972DA233BF009F13D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AABC5FA62DA25A47009F13D8 /* SharkModel.swift */,
+				AABC5FA62DA25A47009F13D8 /* SharkGender.swift */,
 				AABC5FB72DA25FE5009F13D8 /* JournalEntry.swift */,
 				AABC5FCB2DA26D00009F13D8 /* GenderIdentityLog.swift */,
 				AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */,
@@ -372,7 +372,7 @@
 				AABC5FE62DA2767C009F13D8 /* MonthDetailView.swift in Sources */,
 				AABC5FC22DA263C2009F13D8 /* SharkTrackerApp.swift in Sources */,
 				AABC5FE42DA27648009F13D8 /* WeekDetailView.swift in Sources */,
-				AABC5FA72DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FA72DA25A47009F13D8 /* SharkGender.swift in Sources */,
 				AABC5FB82DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
 				AABC5FF52DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FC62DA2657D009F13D8 /* GenderSharkSelectorView.swift in Sources */,
@@ -401,7 +401,7 @@
 				AABC5FDC2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
 				AABC5FF42DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FB92DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
-				AABC5FA82DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FA82DA25A47009F13D8 /* SharkGender.swift in Sources */,
 				AABC5FCC2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
 				AABC5FD12DA26DA3009F13D8 /* GenderTracker.swift in Sources */,
 			);
@@ -415,7 +415,7 @@
 				AABC5FDA2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
 				AABC5FF62DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FBA2DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
-				AABC5FA92DA25A47009F13D8 /* SharkModel.swift in Sources */,
+				AABC5FA92DA25A47009F13D8 /* SharkGender.swift in Sources */,
 				AABC5FCE2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
 				AABC5FD22DA26DA3009F13D8 /* GenderTracker.swift in Sources */,
 			);
