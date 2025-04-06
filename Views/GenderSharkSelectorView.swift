@@ -13,7 +13,9 @@ struct GenderSharkSelectorView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .shadow(radius: 10)
                             .onTapGesture {
+                                // Update the selectedGender in GenderSelectionManager
                                 genderManager.selectedGender = gender
+                                // Call the new logGenderIdentity(_:) method we’ll define in GenderTracker
                                 GenderTracker.shared.logGenderIdentity(gender)
                             }
 

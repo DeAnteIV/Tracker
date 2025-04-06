@@ -16,6 +16,13 @@ class GenderTracker: ObservableObject {
 
     // MARK: - Public Methods
 
+    /// Adds a new log entry for the specified SharkGender, capturing the current date/time.
+    func logGenderIdentity(_ gender: SharkGender) {
+        // Create a new GenderIdentityLog and add it
+        let newLog = GenderIdentityLog(gender: gender, timestamp: Date())
+        addLog(newLog)
+    }
+
     /// Returns all logs that match a given date (same day).
     func logs(for date: Date) -> [GenderIdentityLog] {
         logs.filter {
