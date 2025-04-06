@@ -1,7 +1,13 @@
 import SwiftUI
 
+// MARK: - CalendarMode
 
-// CalendarView now acts as a container for CalendarGridView
+enum CalendarMode: String, CaseIterable {
+    case day, week, month
+}
+
+// MARK: - CalendarView
+
 struct CalendarView: View {
     @State private var selectedDate: Date = Date()
     @State private var displayMode: CalendarMode = .month
@@ -11,16 +17,18 @@ struct CalendarView: View {
     }
 }
 
-public struct CalendarGridView: View {
-    // Two bindings: one for the selected date, one for the display mode
+// MARK: - CalendarGridView
+
+struct CalendarGridView: View {
+    // Bindings for the selected date and display mode
     @Binding var selectedDate: Date
     @Binding var displayMode: CalendarMode
 
+    // Assuming GenderTracker is defined elsewhere in your project.
     @ObservedObject private var tracker = GenderTracker.shared
-    @GestureState private var dragOffset: CGFloat = 0
     private let calendar = Calendar.current
 
-    // Compute which dates to show based on displayMode
+    // Compute the dates to display based on the current display mode.
     private var visibleDates: [Date] {
         switch displayMode {
         case .day:
@@ -34,35 +42,35 @@ public struct CalendarGridView: View {
         }
     }
 
-    // For any date, find the dominant gender
+    // Determine the dominant gender for a given date.
     private func dominantGender(on date: Date) -> SharkGender? {
         let dayLogs = tracker.logs(for: date)
         let counts = Dictionary(grouping: dayLogs, by: { $0.gender }).mapValues { $0.count }
         return counts.max { $0.value < $1.value }?.key
     }
 
-    // Map gender → color
+    // Map a gender to a background color.
     private func color(for gender: SharkGender?) -> Color {
         switch gender {
-        case .masc:        return Color.blue.opacity(0.6)
-        case .fem:         return Color.pink.opacity(0.6)
-        case .nonbinary:   return Color.green.opacity(0.6)
-        default:           return Color.gray.opacity(0.1)
+        case .masc:      return Color.blue.opacity(0.6)
+        case .fem:       return Color.pink.opacity(0.6)
+        case .nonbinary: return Color.green.opacity(0.6)
+        default:         return Color.gray.opacity(0.1)
         }
     }
 
-    public var body: some View {
+    var body: some View {
         VStack(spacing: 8) {
-            // Header
+            // Header title for the selected date.
             Text(headerTitle(for: selectedDate))
                 .font(.title2)
                 .bold()
 
-            // Weekday initials (if not single‑day view)
+            // Weekday initials (shown if the display mode is not "day")
             if displayMode != .day {
                 HStack {
                     ForEach(calendar.shortWeekdaySymbols, id: \.self) { day in
-                        Text(day.prefix(1))
+                        Text(String(day.prefix(1)))
                             .frame(maxWidth: .infinity)
                             .font(.caption)
                     }
@@ -70,7 +78,7 @@ public struct CalendarGridView: View {
             }
 
             // Grid of dates
-            LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 7), spacing: 10) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 10) {
                 ForEach(visibleDates, id: \.self) { date in
                     VStack(spacing: 4) {
                         Text("\(calendar.component(.day, from: date))")
@@ -89,7 +97,7 @@ public struct CalendarGridView: View {
                                 }
                             }
 
-                        // Inline detail view for the tapped date
+                        // Inline detail view for the tapped date.
                         if calendar.isDate(date, inSameDayAs: selectedDate) {
                             switch displayMode {
                             case .day:
@@ -113,7 +121,6 @@ public struct CalendarGridView: View {
             .padding(.horizontal)
             .gesture(
                 DragGesture()
-                    .updating($dragOffset) { value, state, _ in state = value.translation.width }
                     .onEnded { value in
                         let threshold: CGFloat = 50
                         if value.translation.width < -threshold {
@@ -151,39 +158,44 @@ public struct CalendarGridView: View {
 
     private func previousDate() -> Date {
         switch displayMode {
-        case .day:   return calendar.date(byAdding: .day, value: -1, to: selectedDate)!
-        case .week:  return calendar.date(byAdding: .weekOfYear, value: -1, to: selectedDate)!
-        case .month: return calendar.date(byAdding: .month, value: -1, to: selectedDate)!
+        case .day:
+            return calendar.date(byAdding: .day, value: -1, to: selectedDate)!
+        case .week:
+            return calendar.date(byAdding: .weekOfYear, value: -1, to: selectedDate)!
+        case .month:
+            return calendar.date(byAdding: .month, value: -1, to: selectedDate)!
         }
     }
 
     private func nextDate() -> Date {
         switch displayMode {
-        case .day:   return calendar.date(byAdding: .day, value: 1, to: selectedDate)!
-        case .week:  return calendar.date(byAdding: .weekOfYear, value: 1, to: selectedDate)!
-        case .month: return calendar.date(byAdding: .month, value: 1, to: selectedDate)!
+        case .day:
+            return calendar.date(byAdding: .day, value: 1, to: selectedDate)!
+        case .week:
+            return calendar.date(byAdding: .weekOfYear, value: 1, to: selectedDate)!
+        case .month:
+            return calendar.date(byAdding: .month, value: 1, to: selectedDate)!
         }
     }
 }
 
 // MARK: - Calendar Extensions
 
-public extension Calendar {
+extension Calendar {
     func generateDates(in interval: DateInterval) -> [Date] {
         var dates: [Date] = []
         var current = interval.start
         while current < interval.end {
             dates.append(current)
-            current = date(byAdding: .day, value: 1, to: current)!
+            guard let next = date(byAdding: .day, value: 1, to: current) else { break }
+            current = next
         }
         return dates
     }
 
     func datesForWeek(containing date: Date) -> [Date] {
         guard let weekInterval = dateInterval(of: .weekOfYear, for: date) else { return [] }
-        return stride(from: 0, to: 7, by: 1).compactMap {
-            date(byAdding: .day, value: $0, to: weekInterval.start)
-        }
+        return (0..<7).compactMap { date(byAdding: .day, value: $0, to: weekInterval.start) }
     }
 
     func datesForMonth(containing date: Date) -> [Date] {
@@ -192,7 +204,8 @@ public extension Calendar {
         var current = monthInterval.start
         while current <= monthInterval.end {
             dates.append(current)
-            current = date(byAdding: .day, value: 1, to: current)!
+            guard let next = date(byAdding: .day, value: 1, to: current) else { break }
+            current = next
         }
         return dates
     }

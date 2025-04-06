@@ -42,9 +42,9 @@
 		AABC5FEC2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
 		AABC5FED2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
 		AABC5FEE2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */; };
-		AABC5FF02DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
-		AABC5FF12DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
-		AABC5FF22DA2ADCF009F13D8 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */; };
+		AABC5FF42DA311C2009F13D8 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FF32DA311C2009F13D8 /* Extenstions.swift */; };
+		AABC5FF52DA311C2009F13D8 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FF32DA311C2009F13D8 /* Extenstions.swift */; };
+		AABC5FF62DA311C2009F13D8 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5FF32DA311C2009F13D8 /* Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,7 @@
 		AABC5FE32DA27648009F13D8 /* WeekDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetailView.swift; sourceTree = "<group>"; };
 		AABC5FE52DA2767C009F13D8 /* MonthDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetailView.swift; sourceTree = "<group>"; };
 		AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMode.swift; sourceTree = "<group>"; };
-		AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViews.swift; sourceTree = "<group>"; };
+		AABC5FF32DA311C2009F13D8 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +175,7 @@
 				AABC5FCF2DA26DA3009F13D8 /* GenderTracker.swift */,
 				AABC5FD92DA26FB8009F13D8 /* GenderSelectionManager.swift */,
 				AABC5FEB2DA2AA4E009F13D8 /* CalendarMode.swift */,
+				AABC5FF32DA311C2009F13D8 /* Extenstions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +197,6 @@
 				AABC5FE12DA274F0009F13D8 /* DayDetailView.swift */,
 				AABC5FE32DA27648009F13D8 /* WeekDetailView.swift */,
 				AABC5FE52DA2767C009F13D8 /* MonthDetailView.swift */,
-				AABC5FEF2DA2ADCF009F13D8 /* DetailViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,8 +373,8 @@
 				AABC5FC22DA263C2009F13D8 /* SharkTrackerApp.swift in Sources */,
 				AABC5FE42DA27648009F13D8 /* WeekDetailView.swift in Sources */,
 				AABC5FA72DA25A47009F13D8 /* SharkModel.swift in Sources */,
-				AABC5FF02DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
 				AABC5FB82DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
+				AABC5FF52DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FC62DA2657D009F13D8 /* GenderSharkSelectorView.swift in Sources */,
 				AABC5FBC2DA26092009F13D8 /* SharkFinSliderView.swift in Sources */,
 				AABC5FDB2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
@@ -399,7 +399,7 @@
 			files = (
 				AABC5FEE2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */,
 				AABC5FDC2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
-				AABC5FF12DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
+				AABC5FF42DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FB92DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
 				AABC5FA82DA25A47009F13D8 /* SharkModel.swift in Sources */,
 				AABC5FCC2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,
@@ -413,7 +413,7 @@
 			files = (
 				AABC5FED2DA2AA4E009F13D8 /* CalendarMode.swift in Sources */,
 				AABC5FDA2DA26FB8009F13D8 /* GenderSelectionManager.swift in Sources */,
-				AABC5FF22DA2ADCF009F13D8 /* DetailViews.swift in Sources */,
+				AABC5FF62DA311C2009F13D8 /* Extenstions.swift in Sources */,
 				AABC5FBA2DA25FE5009F13D8 /* JournalEntry.swift in Sources */,
 				AABC5FA92DA25A47009F13D8 /* SharkModel.swift in Sources */,
 				AABC5FCE2DA26D00009F13D8 /* GenderIdentityLog.swift in Sources */,

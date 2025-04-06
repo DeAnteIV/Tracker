@@ -1,31 +1,22 @@
 import SwiftUI
 
-struct WeekDetailView: View {
-    var weekDates: [Date]
-    var genderLogs: [GenderIdentityLog]
+struct DayDetailView: View {
+    let date: Date
+    let genderLogs: [GenderIdentityLog]
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Week Overview")
+        VStack {
+            Text("Day Detail for \(dateString)")
                 .font(.headline)
-            ForEach(weekDates, id: \.self) { date in
-                let logs = genderLogs.filter { Calendar.current.isDate($0.timestamp, inSameDayAs: date) }
-                if !logs.isEmpty {
-                    Text("\(formattedDate(date))")
-                        .bold()
-                    ForEach(logs) { log in
-                        Text(log.gender.label)
-                            .foregroundColor(Color(log.gender.color))
-                    }
-                }
+            ForEach(genderLogs) { log in
+                Text(log.gender.label)
             }
         }
-        .padding(4)
     }
 
-    private func formattedDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter.string(from: date)
+    private var dateString: String {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        return df.string(from: date)
     }
 }
